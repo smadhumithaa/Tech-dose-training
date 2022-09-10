@@ -1,31 +1,31 @@
-import java.util.*;
+import java.util.Scanner;
 public class Main
 {
 	public static void main(String[] args) {
-	    Scanner sc = new Scanner(System.in);
-		int n = sc.nextInt();
-		int a[] = new int[n];
-		for(int i=0;i<n;i++)
+	    Scanner sc=new Scanner(System.in);
+		int num=sc.nextInt();
+		int arr[]=new int[num];
+		for(int i=0;i<num;i++)
 		{
-		    a[i] = sc.nextInt();
+		    arr[i]=sc.nextInt();
 		}
-		for(int i=0;i<n-1;i++)
+		for(int i=0;i<num-1;i++)
 		{
-		    int Index = i;
-		    for(int j=i+1;j<n;j++)
+		    int Ind=i;
+		    for(int j=i+1;j<num;j++)
 		    {
-		        if(a[Index] > a[j])
+		        if(a[Ind] > a[j])
 		        {
-		            Index = j;
+		            Ind=j;
 		        }
 		    }
-		    int temp = a[Index];
-		    a[Index] = a[i];
-		    a[i] = temp;
+		    int temp = arr[Ind];
+		    arr[Ind] = arr[i];
+		    arr[i] = temp;
 		}
-		for(int i=0;i<n;i++)
+		for(int i=0;i<num;i++)
 		{
-		    System.out.print(a[i]+" ");
+		    System.out.println(arr[i]);
 		}
 	}
 }
